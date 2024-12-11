@@ -1,0 +1,65 @@
+/* 
+Las configuraciones Globales CSS del proyecto están en App.css
+*/
+
+.productos-container {
+    display: grid;
+    /* Esta configuración con el auto-fit hace la pantalla Responsive */
+    grid-template-rows: 1;
+    grid-template-columns: repeat(auto-fit, minmax(518px, 1fr));
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+
+.productos-container label {
+    display: inline-block;
+    width: 155px;
+    margin-right: 10px;
+}
+
+.productos-main {
+    /* margin: 1px; */
+    padding: 10px;
+    background-color: lightgray;
+    border: 5px solid gray;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.productos-consulta {
+    /* margin: 1px; */
+    padding: 10px;
+    background-color: lightblue;
+    border: 5px solid gray;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.productos-container input {
+    padding: 2px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.productos-container input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+.productos-container select {
+    padding: 3px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    font-size: .8rem;
+    background-color: white;
+}
+
+.productos-container select:focus {
+    border-color: #007bff;
+    outline: none;
+}

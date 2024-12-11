@@ -1,0 +1,340 @@
+/* **************************** PUNTODEVENTA-CONTAINER ********************** */
+
+.puntodeventa-container {
+  width: 90%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows: minmax(30%, 200px) minmax(50%, 200px) minmax(20%, 100px);
+  grid-template-columns: minmax(auto, 60%) minmax(390px, 40%);
+  gap: 10px;
+
+  grid-template-areas: "main header"
+    "main notes"
+    "footer footer";
+}
+
+/* ****************************** HEADER **************************** */
+
+.puntodeventa-container .header {
+  background-color: lightskyblue;
+  border: 10px grey solid;
+  border-radius: 10px;
+  grid-area: header;
+  padding: 10px 20px;
+}
+
+.puntodeventa-container .header .pdv-header {
+  font-size: 1em;
+  ;
+}
+
+.puntodeventa-container .header .pdv-header .father {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.puntodeventa-container .header .pdv-header .father .child {
+  flex: 1;
+}
+
+.puntodeventa-container .header .pdv-header .father .child2 {
+  flex-shrink: 0;
+}
+
+
+.puntodeventa-container .header .pdv-header .container-totales {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.puntodeventa-container .ventanaproductos {
+  display: block;
+  background: white;
+  border-radius: 10px;
+  height: 300px;
+  z-index: 1;
+  overflow-x: scroll;
+  border: 7px solid green;
+  position: absolute;
+  top: 135px;
+  left: 10px; 
+  z-index: 10;
+  width: 550px;
+}
+
+.puntodeventa-container #table1 {
+  border-collapse: collapse;
+  width: 95%;
+}
+
+.puntodeventa-container #table1 th {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+}
+
+.puntodeventa-container #table1 th,
+.puntodeventa-container #table1 td {
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+
+.puntodeventa-container #table1 tr {
+  font-size: .7rem;
+}
+
+.puntodeventa-container #table1 td {
+  font-size: .7rem;
+}
+
+.puntodeventa-container #table1 tbody tr {
+  background-color: #f2f2f2;
+  /* Color de fondo para el renglon */
+  color: black;
+}
+
+/* Alterna el color de los renglones para mejor legibilidad */
+.puntodeventa-container #table1 tbody tr:nth-child(even) {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+
+/* ****************************** MAIN **************************** */
+
+.puntodeventa-container .main {
+  grid-area: main;
+  border: 10px grey solid;
+  border-radius: 10px;
+}
+
+.puntodeventa-container .main .contenedor2 .enca-cifras-totales {
+  display: flex;
+  background-color: gray;
+  justify-content: space-between;
+}
+
+.puntodeventa-container .main .contenedor2 .enca-cifras-totales .detalles-cifras-totales {
+  font-size: x-small;
+  color: white;
+
+}
+
+.puntodeventa-container .main .contenedor2 .enca-cifras-totales .subencabe-cifras-totales {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
+
+.puntodeventa-container .main .contenedor2 .scrollable {
+  width: 100%;
+  /* Este es el height del div scrollable */
+  height: 392px;
+  overflow-x: scroll;
+  scrollbar-color: #4caf50 #f1f1f1;
+}
+
+.puntodeventa-container .my-alert {
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+}
+
+
+/* Tabla sin bordes en columnas */
+.puntodeventa-container .my-table {
+  border-collapse: collapse;
+  /* Evita espacios entre bordes de la tabla */
+  width: 100%;
+}
+
+.puntodeventa-container .my-table th,
+.puntodeventa-container .my-table td {
+  padding: 10px;
+  text-align: left;
+  border: none;
+
+  /* Quita el borde de cada celda */
+}
+
+/* Estilo para cada renglon de la tabla */
+.puntodeventa-container .my-table tbody tr {
+  background-color: #f2f2f2;
+  /* Color de fondo para el renglon */
+}
+
+/* Alterna el color de los renglones para mejor legibilidad */
+.puntodeventa-container .my-table tbody tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.puntodeventa-container .my-table th {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+
+/* ****************************** NOTAS **************************** */
+.puntodeventa-container .notes {
+  border: 10px grey solid;
+  border-radius: 10px;
+  min-height: 100px;
+  grid-area: notes;
+}
+
+
+.puntodeventa-container .notes .container-notas .cifras-notas {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-size: .8em;
+  background: gray;
+  position: sticky;
+  top: 0;
+}
+
+.puntodeventa-container .notes .container-notas .notaspendientes {
+  height: 220px;
+  overflow: scroll;
+
+}
+
+.puntodeventa-container .notes .container-notas .botonesPendientes {
+  font-size: .8em;
+}
+
+
+.puntodeventa-container .notes .container-notas .notaspendientes>div>button {
+  width: 4rem;
+  height: 3rem;
+  margin: 3px;
+  background-color: rgb(37, 220, 20);
+  border-radius: 10px;
+}
+
+
+
+/* ****************************** FOOTER **************************** */
+.puntodeventa-container .footer {
+  /* color: #fff; */
+  grid-area: footer;
+}
+
+.puntodeventa-container .footer .container2 {
+  display: flex;
+  background: lightskyblue;
+  gap: 0px;
+  height: 80px;
+  border: 10px grey solid;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.puntodeventa-container .footer .container2 .child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.puntodeventa-container .footer .container2 .child .botones {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  gap: 5px;
+}
+
+
+/* ****************************** MEDIA QUERY ************************************* */
+
+@media screen and (max-width: 806px) {
+
+  .puntodeventa-container {
+    /* border: 5px purple solid; */
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: 110px 235px 100px 140px;
+    /* grid-template-columns: repeat(1, minmax(370px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fit, minmax(432px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 2px;
+
+    grid-template-areas: "header"
+      "main"
+      "notes"
+      "footer";
+  }
+
+  .puntodeventa-container .notes .container-notas .notaspendientes {
+    /* Este es el height para scrollable de notas pendientes */
+    height: 60px;
+  }
+
+
+  .puntodeventa-container .main .contenedor2 .scrollable {
+    width: 100%;
+    /* Este es el height del div scrollable */
+    height: 200px;
+    overflow-x: scroll;
+    scrollbar-color: #4caf50 #f1f1f1;
+  }
+
+
+
+  .puntodeventa-container .my-table th,
+  .puntodeventa-container .my-table td {
+    padding: 10px;
+    text-align: left;
+    border: none;
+    font-size: smaller;
+
+  }
+
+  .puntodeventa-container .header .pdv-header .container-totales {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  .puntodeventa-container .header .pdv-header .container-totales .item {
+    flex: 1;
+  }
+
+
+  .puntodeventa-container .footer .container2 .child1 .botones {
+    font-size: .9em;
+  }
+
+
+  .puntodeventa-container .footer .container2 .child .botones .btn-letra {
+    /* width: 120px; */
+    font-size: 10px;
+  }
+
+
+  .puntodeventa-container .ventanaproductos {
+    display: block;
+    background: white;
+    border-radius: 10px;
+    height: 300px;
+    z-index: 1;
+    overflow-x: scroll;
+    border: 7px solid green;
+     position: absolute;
+    top: 135px;
+    left: 10px; 
+    z-index: 10;
+    width: 480px;
+  }
+}
