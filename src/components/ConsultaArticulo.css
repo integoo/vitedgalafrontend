@@ -1,0 +1,34 @@
+.container-consultaArticulos .row .col-md-4{
+    font-size:0.7rem;
+    background: lightblue;
+    border: 3px gray solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container-consultaArticulos .header-row label{
+    width: 120px;
+}
+
+.container-consultaArticulos .row {
+    margin-top: 10px;
+}
+
+.container-consultaArticulos .row input {
+    width: 180px;
+}
+
+
+.container-consultaArticulos .containerTable1{
+    width:15rem;
+    height:15rem;
+    overflow: scroll;
+}
+
+.container-consultaArticulos .row label {
+    width: 150px;
+}
+
+.container-consultaArticulos table td{
+    border: 3px gray solid;
+}

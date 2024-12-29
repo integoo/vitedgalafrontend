@@ -1,0 +1,17 @@
+
+
+#tableInputCodigoBarras{
+    width:95%;
+    margin-left:10px;
+    height: 40vh;
+    border: 10px solid lightgrey;
+    border-radius: 10px;
+    display:none;
+    overflow: scroll;
+    font-size: .80rem;
+}
+
+#table1 th, td {
+    font-size: .80rem;
+}
+

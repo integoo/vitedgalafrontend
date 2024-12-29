@@ -1,0 +1,33 @@
+.container-ajustesinventario .main .xheader{
+    height: 360px;
+    border: 5px solid darkgray;
+    border-radius: 10px;
+    overflow: scroll;
+    /* padding-bottom: 10px; */
+    padding: 20px;
+    background: lightskyblue;
+
+}
+
+.container-ajustesinventario label{
+    width: 150px;
+}
+
+.container-ajustesinventario .xfooter{
+    height: 150px;
+    margin-top: 5px;
+    padding-top: 5px;
+    border: 5px solid darkgray;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.container-ajustesinventario .displaybuttons {
+    display:flex;
+    justify-content: center;
+}
+
+.container-ajustesinventario table th,
+.container-ajustesinventario table td {
+    border: 3px gray solid;
+}

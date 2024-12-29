@@ -7,12 +7,13 @@ import PuntoDeVenta4Footer from './PuntoDeVenta4Footer';
 import { handleGetMethod } from '../utils/FuncionesGlobales'
 import PuntoDeVenta2Main from './PuntoDeVenta2Main';
 
-const PuntoDeVenta = ({ onProps, Administrador }) => {
+const PuntoDeVenta = ({ onProps }) => {
     const accessToken = onProps.accessToken
     let origin = onProps.origin
     const [SucursalId, setSucursalId] = useState(onProps.SucursalId)
     const ColaboradorId = onProps.ColaboradorId
     const User = onProps.User
+    const Administrador = onProps.Administrador
 
 
     const [sucursales, setSucursales] = useState([])

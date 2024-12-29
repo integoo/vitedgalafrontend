@@ -1,0 +1,22 @@
+.container-cambiosdepresentacion .tablaBusquedaProductos{
+    height: 145px;
+    /* border: 5px solid green; */
+    display: none;
+    overflow:scroll;
+}
+
+
+.container-cambiosdepresentacion .tablaBusquedaHijos{
+    height: 145px;
+    /* border: 5px solid green; */
+    display: none;
+}
+
+.container-cambiosdepresentacion {
+    font-size: .7em;
+}
+
+.container-cambiosdepresentacion table th,
+.container-cambiosdepresentacion table td {
+    border: 3px gray solid;
+}

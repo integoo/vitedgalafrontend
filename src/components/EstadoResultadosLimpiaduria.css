@@ -1,0 +1,51 @@
+.container-estadoresultadoslimpiaduria {
+    font-size: .7em;
+}
+
+.container-estadoresultadoslimpiaduria table td {
+    text-align: right;
+    background: #EFF3F1;
+}
+
+.container-estadoresultadoslimpiaduria #idHeader{
+    position:relative;
+    top: -25px;
+    left: 70%;
+}
+
+.container-estadoresultadoslimpiaduria .otrosingresosgastos{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -40px;
+}
+
+.container-estadoresultadoslimpiaduria #idOrdenamientoRadioGroup{
+    position: relative;
+    top: 0px;
+    left: 90%;
+}
+
+.container-estadoresultadoslimpiaduria .totalMovimientos{
+    position: relative;
+    left: 70%;
+}
+
+/* @media only screen and (max-width: 387px) { */
+@media only screen and (max-width: 420px) {
+   .container-estadoresultadoslimpiaduria #idHeader{
+        position:relative;
+        top: 25px;
+        left: 60%;
+    }
+
+    .container-estadoresultadoslimpiaduria #idOtrosIngresosGastos{
+        display:none;
+    }
+
+    .container-estadoresultadoslimpiaduria .otrosingresosgastos{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0px;
+    }
+}
+

@@ -1,0 +1,31 @@
+
+.ventasbi-container {
+    font-size: .7em;
+}
+
+.ventasbi-container table {
+    border: 5px gray solid;
+    border-collapse: collapse;
+}
+
+.ventasbi-container th {
+    border: 2px gray solid;
+    text-align: center;
+}
+.ventasbi-container td {
+    border: 2px gray solid;
+    background: #dddddd;
+    text-align: right;
+}
+
+.ventasbi-container #idYears{
+    position: relative;
+    top: 30px;
+    left: 70%;
+}
+
+.ventasbi-container #idSpanOrdenamientoTotal{
+    position: relative;
+    top: -20px;
+    left: 70%;
+}

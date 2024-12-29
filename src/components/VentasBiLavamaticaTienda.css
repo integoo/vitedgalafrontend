@@ -1,0 +1,22 @@
+
+.containerVentasBiLavamanticaTienda {
+    width: 90%;
+    margin: 10px auto;
+    font-size: .7em;
+}
+
+
+.containerVentasBiLavamanticaTienda table{
+    border:5px gray solid;
+    width: 95%;
+}
+
+.containerVentasBiLavamanticaTienda th {
+    border:3px gray solid;
+    text-align: center;
+}
+.containerVentasBiLavamanticaTienda td {
+    border:3px gray solid;
+    background: #dddddd;
+    text-align: right;
+}

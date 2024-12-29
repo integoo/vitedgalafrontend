@@ -1,0 +1,41 @@
+/* .container-IELimpiaduriaBI .principal{
+    width: 90%;
+    margin: 0 auto;
+    min-width: 543px;
+} */
+
+.container-IELimpiaduriaBI .sumatoria{
+    text-align: right;
+    margin-right: 64px;
+}
+
+.container-IELimpiaduriaBI .sumatoria input[type=text]{
+    text-align: right;
+}
+
+
+.container-IELimpiaduriaBI .principal label {
+    margin-left: 5px;
+    width: 150px;
+    min-width: 150px;
+}
+
+.container-IELimpiaduriaBI .radiogroup {
+    border:2px darkgrey solid;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    line-height: 10px;
+}
+
+.container-IELimpiaduriaBI .formparent {
+    display:flex;
+    justify-content:right;
+}
+
+.container-IELimpiaduriaBI .t1 td:hover{
+    background-color: yellow;
+}
+
+
+

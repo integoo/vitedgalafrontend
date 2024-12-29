@@ -5,6 +5,21 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import Productos from "./Productos"
 import MenuRobot from './utils/MenuRobot'
 import PuntoDeVenta from './puntoDeVenta/PuntoDeVenta';
+import RetirosDeCaja from './RetirosDeCaja';
+import VentasConsultaSucursalesHoy from './VentasConsultaSucursalesHoy';
+import VentasBI from './VentasBI';
+import VentasBiLavamaticaTienda from './VentasBiLavamanticaTienda'
+import Ingresos from './Ingresos'
+import Egresos from './Egresos'
+import EstadoResultadosLimpiaduria from './EstadoResultadosLimpiaduria';
+import IELimpiaduriaBI from './IELimpiaduriaBI';
+import ComprasRecepcion from './ComprasRecepcion';
+import ConsultaArticulo from './ConsultaArticulo';
+import Kardex from './Kardex';
+import AjustesInventario from './AjustesInventario';
+import CambiosDePresentacion from './CambiosDePresentacion';
+import TraspasosSalidaEntrada from './TraspasosSalidaEntrada';
+import InventarioFaltantes from './InventarioFaltantes';
 
 const Menu = ({ onhandlerAppState, onPropsMenu }) => {
   const SucursalId = onPropsMenu.sucursalId
@@ -34,7 +49,8 @@ const Menu = ({ onhandlerAppState, onPropsMenu }) => {
     origin: origin,
     SucursalId: SucursalId,
     ColaboradorId: ColaboradorId,
-    User: User
+    User: User,
+    Administrador: administrador,
   }
 
 
@@ -94,27 +110,37 @@ const Menu = ({ onhandlerAppState, onPropsMenu }) => {
               <NavDropdown title="Punto de Venta" id="basic-nav-dropdown" disabled={isDisabled}>
                 {/* <NavDropdown.Item as={Link} to="/puntoDeVenta">💵 Punto de Venta</NavDropdown.Item> */}
                 <NavDropdown.Item as={Link} to="/menu/puntoDeVenta" disabled={isDisabled} onClick={closeMenu}>🛒 Punto de Venta</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/submenu2">💰 Retiro de Caja</NavDropdown.Item>
+                <div className="dropdown-divider"></div>
+                <NavDropdown.Item as={Link} to="/menu/retirosdecaja" disabled={isDisabled} onClick={closeMenu}>💰 Retiro de Caja</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Ventas" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/submenu1">Submenú 1</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/submenu2">Submenú 2</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/consultaventassucursaleshoy" disabled={isDisabled} onClick={closeMenu}>Consulta Ventas Sucursales Hoy</NavDropdown.Item>
+                <div className="dropdown-divider"></div>
+                <NavDropdown.Item as={Link} to="/menu/bi-limpiaduria" disabled={isDisabled} onClick={closeMenu}>Inteligencia de Negocio Limpiaduría</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/bi-lavamatica" disabled={isDisabled} onClick={closeMenu}>Inteligencia de Negocio Lavamática</NavDropdown.Item>
+                {/* <NavDropdown.Item as={Link} to="/submenu2">Submenú 2</NavDropdown.Item> */}
               </NavDropdown>
 
               <NavDropdown title="Contabilidad" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/submenu1">Submenú 1</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/submenu2">Submenú 2</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/ingresos" disabled={isDisabled} onClick={closeMenu}>Ingresos</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/contabilidad/egresos" disabled={isDisabled} onClick={closeMenu}>Egresos</NavDropdown.Item>
+                <div className="dropdown-divider"></div>
+                <NavDropdown.Item as={Link} to="/menu/contabilidad/estadoderesultadoslimpiaduria" disabled={isDisabled} onClick={closeMenu}>Estado de Resultados Limpiaduría</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/contabilidad/IELimpiaduriaBI" disabled={isDisabled} onClick={closeMenu}>Egresos Limpiaduría</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Compras" id="basic-nav-dropdown" disabled={isDisabled}>
-                <NavDropdown.Item as={Link} to="/submenu1">Submenú 1</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/submenu2">Submenú 2</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/compras/comprasrecepcion" disabled={isDisabled} onClick={closeMenu} >Compras Recepción</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown title="Inventario" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/submenu1">Submenú 1</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/submenu2">Submenú 2</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/inventario/consultaarticulo" disabled={isDisabled} onClick={closeMenu} >Consulta Artículo</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/inventario/kardex" disabled={isDisabled} onClick={closeMenu} >Kardex</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/inventario/ajustesinventario" disabled={isDisabled} onClick={closeMenu} >Ajustes Inventario</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/inventario/cambiosdepresentacion" disabled={isDisabled} onClick={closeMenu} >Cambios de Presentación</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/inventario/traspasossalidaentrada" disabled={isDisabled} onClick={closeMenu} >Traspasos Salida/Entrada</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu/inventario/inventariofaltantes" disabled={isDisabled} onClick={closeMenu} >Inventario Faltantes</NavDropdown.Item>
               </NavDropdown>
 
               <button className='btn btn-danger' onClick={handlerLogout}>Salir</button>
@@ -128,8 +154,25 @@ const Menu = ({ onhandlerAppState, onPropsMenu }) => {
 
       {/****************************************** Rutas ********************************************/}
       <Routes>
+        {/* Corregir los paths de los primeros Route */}
         <Route path="productos" element={<Productos onProps={myProps} />} />
-        <Route path="puntoDeVenta" element={<PuntoDeVenta onProps={myProps} Administrador={administrador} />} />
+        <Route path="puntoDeVenta" element={<PuntoDeVenta onProps={myProps} />} />
+        <Route path="retirosdecaja" element={<RetirosDeCaja onProps={myProps} />} />
+        <Route path="consultaventassucursaleshoy" element={<VentasConsultaSucursalesHoy onProps={myProps} />} />
+        <Route path="bi-limpiaduria" element={<VentasBI onProps={myProps} />} />
+        <Route path="bi-lavamatica" element={<VentasBiLavamaticaTienda onProps={myProps} />} />
+        <Route path="ingresos" element={<Ingresos onProps={myProps} naturalezaCC="1"/>} />
+        <Route path="contabilidad/egresos" element={<Egresos onProps={myProps} naturalezaCC="-1"/>} />
+        <Route path="contabilidad/estadoderesultadoslimpiaduria" element={<EstadoResultadosLimpiaduria onProps={myProps} />} />
+        <Route path="contabilidad/IELimpiaduriaBI" element={<IELimpiaduriaBI onProps={myProps} />} />
+        <Route path="compras/comprasrecepcion" element={<ComprasRecepcion onProps={myProps} />} />
+        <Route path="inventario/consultaarticulo" element={<ConsultaArticulo onProps={myProps} />} />
+        <Route path="inventario/kardex" element={<Kardex onProps={myProps} />} />
+        <Route path="inventario/ajustesinventario" element={<AjustesInventario onProps={myProps} />} />
+        <Route path="inventario/cambiosdepresentacion" element={<CambiosDePresentacion onProps={myProps} />} />
+        <Route path="inventario/traspasossalidaentrada" element={<TraspasosSalidaEntrada onProps={myProps} />} />
+        <Route path="inventario/inventariofaltantes" element={<InventarioFaltantes onProps={myProps} />} />
+
       </Routes>
       </>
   );

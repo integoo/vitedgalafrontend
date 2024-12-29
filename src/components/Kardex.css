@@ -1,0 +1,16 @@
+
+.container-kardex .kardexmain {
+    height: 40rem;
+    border: 5px solid red;
+}
+
+.container-kardex .contenido{
+    margin-top: 1rem;
+    margin-left: -10px;
+    height: 14rem;
+    width: 340px;
+    border: 5px solid green;
+    border-radius: 10px;
+    /* overflow-y: scroll; */
+    overflow: scroll;
+}

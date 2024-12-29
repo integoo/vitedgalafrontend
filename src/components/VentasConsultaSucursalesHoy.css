@@ -1,0 +1,28 @@
+
+
+.ventasconsultasucursaleshoy{
+    font-size: .7em;
+}
+
+
+.ventasconsultasucursaleshoy table {
+    /* width: 95%; */
+    margin: 10px 0;
+    border:5px gray solid;
+    /* padding: 2px; */
+    border-collapse: collapse; 
+}
+
+.ventasconsultasucursaleshoy table td {
+    border: 3px gray solid;
+}
+
+.ventasconsultasucursaleshoy th{
+    text-align: center;
+}
+
+.ventasconsultasucursaleshoy th, td{
+    margin: 10px 0;
+    border:3px gray solid;
+    padding: 2px;
+}

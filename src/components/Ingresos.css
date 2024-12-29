@@ -1,0 +1,175 @@
+.ingresos-container {
+    display: grid;
+    grid-template-columns: minmax(430px, 40%) 60%;
+    gap: 10px;
+    font-size: .7em;
+}
+
+.ingresos-container .item {
+    padding: 10px 20px;
+    border: 5px green solid;
+    border-radius: 10px;
+}
+
+.ingresos-container .item1 {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ingresos-container .item2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.ingresos-container .item3 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.ingresos-container .form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: -10px;
+
+}
+
+.ingresos-container .form-row-titulos {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -10px;
+}
+
+.ingresos-container .form-row-titulos .form-row-titulos-items {
+    margin-right: 40px;
+}
+
+.ingresos-container .form-row label,
+.ingresos-container .form-row2 label {
+    width: 150px;
+    text-align: left;
+}
+
+.ingresos-container input {
+    width: 100px;
+}
+
+
+.ingresos-container .form-row2 {
+    margin-bottom: -10px;
+}
+
+.ingresos-container .form-row2 button {
+    background: #ffc107;
+    width: 25px;
+}
+
+.ingresos-container .form-botones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ingresos-container .form-totaldiames {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ingresos-container .form-totaldiames .child {
+    display: flex;
+}
+
+.ingresos-container .form-totaldiames .child label {
+    padding: 0 10px 0 0;
+}
+
+
+.ingresos-container .item1 select {
+    width: 180px;
+}
+
+.ingresos-container #id_fecha {
+    width: 180px;
+}
+
+.ingresos-container table {
+    border: 5px gray solid;
+}
+
+.ingresos-container table th,
+.ingresos-container table td {
+    border: 3px gray solid;
+}
+
+
+.ingresos-container table td {
+    background: lightgray;
+}
+
+
+.ingresos-container .item1 .container-ventanaModifica {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ingresos-container .item1 .container-ventanaModifica label {
+    width: 60px;
+}
+
+.ingresos-container .item1 .container-ventanaModifica .child {
+    display: flex;
+    align-items: center;
+}
+
+.ingresos-container .item3 .divScroll {
+    /* width: 630px; */
+    width: 100%;
+    height: 503px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+
+}
+
+.ingresos-container .item2 .ingresosTabla1 table td {
+    font-size: 1.2em;
+}
+
+
+.ingresos-container .item3 .divScroll table td {
+    font-size: .9em;
+}
+
+
+
+@media screen and (max-width: 806px) {
+    .ingresos-container {
+        display: grid;
+        grid-template-columns: 430px;
+        gap: 10px;
+        font-size: .7em;
+    }
+
+    .ingresos-container .item1 {
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ingresos-container .item2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .ingresos-container .item3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .ingresos-container .item3 .divScroll {
+        font-size: .7em;
+    }
+
+
+}
+
