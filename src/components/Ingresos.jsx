@@ -844,8 +844,8 @@ const Ingresos = ({ onProps, naturalezaCC }) => {
           </div>
 
           <div className="form-botones">
-            <button className="btn btn-danger btn-md" disabled >Cancelar</button>
             <button className="btn btn-success btn-lg" onClick={handleGrabar} disabled={disabledBotonGrabar}>Grabar</button>
+            <button className="btn btn-danger btn-md" disabled >Cancelar</button>
           </div>
         </div>
 

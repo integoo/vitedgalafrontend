@@ -70,7 +70,7 @@ const Menu = ({ onhandlerAppState, onPropsMenu }) => {
     isDisabled = true
   }
   if (perfilTransacciones === "Colaborador") {
-    isDisabled = true
+    isDisabled = false 
   }
   //******************************************************************************** */
 

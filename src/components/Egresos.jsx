@@ -616,10 +616,10 @@ const Egresos = ({ onProps, naturalezaCC }) => {
 
             <div className="botones-vm">
               <div className="btn-mod">
-                <button className="btn btn-danger" onClick={handleCancelarModifica}>Cancelar</button>
+                <button className="btn btn-success" onClick={handleMontoActualiza}>Modificar</button>
               </div>
               <div className="btn-mod">
-                <button className="btn btn-success" onClick={handleMontoActualiza}>Modificar</button>
+                <button className="btn btn-danger" onClick={handleCancelarModifica}>Cancelar</button>
               </div>
             </div>
 
@@ -664,8 +664,8 @@ const Egresos = ({ onProps, naturalezaCC }) => {
           <br />
           <br />
           <div className="contenedor-botones">
-            <button className="btn btn-danger" type="button" onClick={handleCancelar}>Cancelar</button>
             <button className="btn btn-success" type="button" onClick={handleGrabar}>Grabar</button>
+            <button className="btn btn-danger" type="button" onClick={handleCancelar}>Cancelar</button>
           </div>
         </div>
 
