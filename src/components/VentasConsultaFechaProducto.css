@@ -1,0 +1,22 @@
+.consultaventafechaproductomain{
+    border: 5px solid green;
+    border-radius: 10px;
+    height: 500px;
+    background-color: rgb(203, 236, 181);
+
+}
+
+.consultaventafechaproductomain .detalles{
+    /* width: 650px; */
+    border: 5px solid green;
+    border-radius: 10px;
+    height: 200px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+
+.consultaventafechaproductomain table th,
+.consultaventafechaproductomain table td {
+    border: 3px orange solid;
+}

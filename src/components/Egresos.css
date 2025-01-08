@@ -30,12 +30,16 @@
 }
 
 .container-egresos #id-fecha {
-  width: 85px;
+  width: 105px;
+  height: 35px;
+  font-size: medium;
 }
 
 .container-egresos #input-monto {
   text-align: right;
   width: 95px;
+  height: 25px;
+  font-size: 1.2em;
 }
 
 .container-egresos .item1 .item1-footer {
@@ -55,6 +59,9 @@
 .container-egresos .item1 select {
   width: 220px;
   max-width: 220px;
+  height: 30px;
+  margin: 4px 0;
+  font-size:1.2em;
 }
 
 .container-egresos .item1 textarea {

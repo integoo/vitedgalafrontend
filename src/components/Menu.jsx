@@ -20,6 +20,7 @@ import AjustesInventario from './AjustesInventario';
 import CambiosDePresentacion from './CambiosDePresentacion';
 import TraspasosSalidaEntrada from './TraspasosSalidaEntrada';
 import InventarioFaltantes from './InventarioFaltantes';
+import VentasConsultaFechaProducto from './VentasConsultaFechaProducto';
 
 const Menu = ({ onhandlerAppState, onPropsMenu }) => {
   const SucursalId = onPropsMenu.sucursalId
@@ -117,6 +118,7 @@ const Menu = ({ onhandlerAppState, onPropsMenu }) => {
               <NavDropdown title="Ventas" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to="/menu/consultaventassucursaleshoy" disabled={isDisabled} onClick={closeMenu}>Consulta Ventas Sucursales Hoy</NavDropdown.Item>
                 <div className="dropdown-divider"></div>
+                <NavDropdown.Item as={Link} to="/menu/ventasconsultafechaproducto" disabled={isDisabled} onClick={closeMenu}>Consulta Ventas(Fecha/Producto)</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/menu/bi-limpiaduria" disabled={isDisabled} onClick={closeMenu}>Inteligencia de Negocio Limpiaduría</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/menu/bi-lavamatica" disabled={isDisabled} onClick={closeMenu}>Inteligencia de Negocio Lavamática</NavDropdown.Item>
                 {/* <NavDropdown.Item as={Link} to="/submenu2">Submenú 2</NavDropdown.Item> */}
@@ -159,6 +161,7 @@ const Menu = ({ onhandlerAppState, onPropsMenu }) => {
         <Route path="puntoDeVenta" element={<PuntoDeVenta onProps={myProps} />} />
         <Route path="retirosdecaja" element={<RetirosDeCaja onProps={myProps} />} />
         <Route path="consultaventassucursaleshoy" element={<VentasConsultaSucursalesHoy onProps={myProps} />} />
+        <Route path="ventasconsultafechaproducto" element={<VentasConsultaFechaProducto onProps={myProps} />} />
         <Route path="bi-limpiaduria" element={<VentasBI onProps={myProps} />} />
         <Route path="bi-lavamatica" element={<VentasBiLavamaticaTienda onProps={myProps} />} />
         <Route path="ingresos" element={<Ingresos onProps={myProps} naturalezaCC="1"/>} />

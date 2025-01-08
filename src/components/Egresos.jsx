@@ -662,7 +662,6 @@ const Egresos = ({ onProps, naturalezaCC }) => {
           <br />
           <textarea name="" id="" value={comentarios} onChange={handleComentarios} placeholder='Comentarios...'></textarea>
           <br />
-          <br />
           <div className="contenedor-botones">
             <button className="btn btn-success" type="button" onClick={handleGrabar}>Grabar</button>
             <button className="btn btn-danger" type="button" onClick={handleCancelar}>Cancelar</button>
