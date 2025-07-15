@@ -556,6 +556,7 @@ const Ingresos = ({ onProps, naturalezaCC }) => {
       alert("No hay movimiento que registrar");
       return;
     }
+    setDisabledBotonGrabar(true)
     let json = []
 
     if (isDisabledVentanaEmpresa) {
