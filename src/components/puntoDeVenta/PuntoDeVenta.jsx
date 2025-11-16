@@ -215,6 +215,7 @@ const PuntoDeVenta = ({ onProps }) => {
                 Status: "P",
                 detalles: detalles,
             };
+
             try {
                 let url = `${origin}/api/grabaventas`;
                 let response = await fetch(url, {
@@ -303,6 +304,7 @@ const PuntoDeVenta = ({ onProps }) => {
         let arreglo = [];
         let jsonDetalles;
         let vSerialId = 0
+
         detalles.map((element, i) => {
             if (FolioId === 0) {
                 vSerialId = i + 1
@@ -332,6 +334,7 @@ const PuntoDeVenta = ({ onProps }) => {
             Status: "V",
             detalles: arreglo,
         };
+
         //##########################################################################################
         if (FolioId === 0) {
             //Inserta Venta con status 'V' (Cerrara) en la Base de Datos
@@ -610,8 +613,55 @@ const PuntoDeVenta = ({ onProps }) => {
     //     }
     // };
 
-    const handleDetalles = (vArreglo) => {
+    const handleDetalles = async(vArreglo) => {
         setDetalles([...detalles, vArreglo[0]])
+        //***********eu
+        if (FolioId > 0 ){
+            //alert("Aquí debe insertar registro de Venta Pendiente")
+            //alert(JSON.stringify(detalles))
+            //alert(JSON.stringify(vArreglo))
+            //console.log(JSON.stringify(detalles))
+            //console.log(JSON.stringify(vArreglo[0]))
+
+            const json = {
+                SucursalId: SucursalId,
+                FolioId: FolioId,
+                ClienteId: ClienteId,
+                CajeroId: ColaboradorId,
+                VendedorId: ColaboradorId,
+                SerialId: 0,
+                CodigoId: vArreglo[0].CodigoId,
+                CodigoBarras: vArreglo[0].CodigoBarras,
+                UnidadesRegistradas: vArreglo[0].Unidades,
+                PrecioVentaConImpuesto: vArreglo[0].PrecioVentaConImpuesto,
+                Usuario: User
+            }
+            //console.log(JSON.stringify(detalles[0]))
+            //console.log(JSON.stringify(json))
+
+            try {
+                let url = `${origin}/api/agregaregistroventapendiente`;
+                let response = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(json),
+                    headers: {
+                        Authorization: `Bear ${accessToken}`,
+                        "Content-Type": "application/json",
+                    },
+                });
+                let data = await response.json();
+                console.log(JSON.stringify(data))
+                if (data.error) {
+                    console.log(data.error);
+                    alert(data.error);
+                    return;
+                }
+            } catch (error) {
+                console.log(error.message);
+                alert(error.message);
+                return
+            }
+        }
     }
 
 

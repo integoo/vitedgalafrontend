@@ -19,8 +19,8 @@ function App() {
   const [colaboradorId, setColaboradorId] = useState(0)
 
   const [origin, setOrigin] = useState("")
-  const [version, setVersion] = useState(" v2.7")
-  const [versionFecha, setVersionFecha] = useState(" 2025 Jul 15")
+  const [version, setVersion] = useState(" v2.8")
+  const [versionFecha, setVersionFecha] = useState(" 2025 Nov 16")
 
 
   const handlerAppState = (SucursalId, trueFalse, accessToken, dbName, Administrador, PerfilTransacciones, user, ColaboradorId, origin) => {

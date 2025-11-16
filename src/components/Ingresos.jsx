@@ -557,6 +557,7 @@ const Ingresos = ({ onProps, naturalezaCC }) => {
       return;
     }
     setDisabledBotonGrabar(true)
+    
     let json = []
 
     if (isDisabledVentanaEmpresa) {
