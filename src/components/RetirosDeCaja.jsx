@@ -397,20 +397,22 @@ class RetirosDeCaja extends React.Component {
       this.retiroInput.current.focus();
       return;
     }
-
     if (
       parseFloat(this.state.MontoPendiente) < parseFloat(this.state.MontoRetiro)
     ) {
-      if (
-        !window.confirm(
-          "El MONTO DEL RETIRO excede el MONTO PENDIENTE a Retirar. ¿Desea Continuar?"
-        )
-      ) {
-        this.setState({
-          MontoRetiro: "",
-        });
+      // if (
+      //   !window.confirm(
+      //     "El MONTO DEL RETIRO excede el MONTO PENDIENTE a Retirar. ¿Desea Continuar?"
+      //   )
+      // ) {
+      //   this.setState({
+      //     MontoRetiro: "",
+      //   });
+      alert("El monto a retirar EXCEDE el MONTO PENDIENTE a Retirar")
+      this.setState({MontoRetiro: "",})
+      this.retiroInput.current.focus()
         return;
-      }
+      //}
     }
     const json = {
       SucursalId: this.state.SucursalId,
